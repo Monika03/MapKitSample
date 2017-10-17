@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HfR-rF-tT2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olN-n0-z1N">
+                                <rect key="frame" x="0.0" y="613" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="as3-YH-Me0">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="h12-QM-S5f">
+                                            <rect key="frame" x="16" y="7" width="290" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Standard"/>
+                                                <segment title="Satellite"/>
+                                                <segment title="Hybrid"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="setMap:" destination="BYZ-38-t0r" eventType="valueChanged" id="5d4-3O-Nux"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HfR-rF-tT2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Js-cd-Rg7"/>
+                            <constraint firstItem="HfR-rF-tT2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2EM-qV-4Y4"/>
+                            <constraint firstItem="olN-n0-z1N" firstAttribute="top" secondItem="HfR-rF-tT2" secondAttribute="bottom" constant="19" id="3Ja-VU-073"/>
+                            <constraint firstItem="olN-n0-z1N" firstAttribute="leading" secondItem="HfR-rF-tT2" secondAttribute="leading" id="4pD-Xy-cyY"/>
+                            <constraint firstItem="olN-n0-z1N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bm9-Lg-03i"/>
+                            <constraint firstAttribute="trailing" secondItem="HfR-rF-tT2" secondAttribute="trailing" id="X2z-kW-PUL"/>
+                            <constraint firstItem="HfR-rF-tT2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="co3-wg-tAP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="olN-n0-z1N" secondAttribute="bottom" constant="10" id="k2u-fo-mq4"/>
+                            <constraint firstItem="olN-n0-z1N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nzt-EH-UKZ"/>
+                            <constraint firstItem="HfR-rF-tT2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zmV-vP-tfx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="HfR-rF-tT2" id="BwO-Rl-Z7J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="289"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
